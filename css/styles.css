@@ -1,0 +1,183 @@
+header h1 {
+    font-family: 'Georgia', serif; /* Font elegan */
+    font-size: 3em; /* Ukuran besar */
+    color: #4b3c2a; /* Warna cokelat */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks */
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 2px; /* Spasi antar huruf */
+}
+
+.social-bar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; 
+    margin: 0;
+    padding: 0;
+    background-image: url('https://assets.mockup.graphics/assets/png/IMG_6826.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    opacity: 0.9; 
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    color: #4b3c2a;
+    margin-top: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.coffee-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.coffee-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.coffee-name {
+    font-size: 1.5em;
+    color: #4b3c2a;
+    margin: 10px 0;
+}
+
+.coffee-description {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.button {
+    background-color: #4b3c2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #6f5b4e;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.social-bar {
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes hoverEffect {
+    from {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        transform: scale(1.1);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.coffee-item:hover {
+    animation: hoverEffect 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 105%;
+    }
+}
+
+body::before {
+    animation: backgroundZoom 10s infinite alternate ease-in-out;
+}
